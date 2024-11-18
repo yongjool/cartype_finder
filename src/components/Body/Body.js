@@ -94,10 +94,9 @@ const Body = ({setPredictions}) => {
           style={{ display: 'none' }} // Hide the file input
           onChange={handleSubmit} // Handle file selection
         />
-        <button className={styles.grid__button} 
-            onClick={() => document.getElementById('fileInput').click()}
-            >Upload your Car picture</button>
-             
+          <button className={styles.grid__button} 
+              onClick={() => document.getElementById('fileInput').click()}
+              >Upload your Car picture</button>
         {/* Display error */}
         {error && <p className={styles.error}>{error}</p>}
       </div>
