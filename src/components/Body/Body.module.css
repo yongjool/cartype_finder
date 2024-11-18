@@ -16,6 +16,8 @@
     max-width: 100%; /* Make image responsive */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Space below the image */
+    max-height: 500px; /* Limits height to 500px */
+    object-fit: contain; /* Maintains aspect ratio while resizing */
   }
   
   .grid__text {
