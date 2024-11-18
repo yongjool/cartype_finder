@@ -1,0 +1,89 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    margin: 20px;
+  }
+  
+  .grid__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text inside */
+  }
+  
+  .grid__image {
+    max-width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+  }
+  
+  .grid__text {
+    color: #0073CF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  
+  .grid__button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #0073CF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .grid__button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's above other content */
+  }
+  
+  /* Spinner styling */
+  .spinner {
+    border: 4px solid #f3f3f3; /* Light gray border */
+    border-top: 4px solid #0073CF; /* Blue border-top */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+
+  /* Keyframes for spinner rotation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+    }
+  
+    .grid__column {
+      margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+  }
+  
