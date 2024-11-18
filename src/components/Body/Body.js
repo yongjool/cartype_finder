@@ -12,6 +12,7 @@ const Body = ({setPredictions}) => {
     const API_URL = process.env.REACT_APP_PREDICTION_URL;
     const PREDICTION_KEY = process.env.REACT_APP_PREDICTION_KEY;
 
+    console.log(API_URL);
     
     const handleSubmit = async (event) => {
         event.preventDefault();
